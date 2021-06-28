@@ -2,10 +2,13 @@
 - name: Playbook - Install figlet
   hosts: planetexpress
   gather_facts: yes # default is yes
-
+  connection: ssh   #use the connection plugin type, "ssh" (default)
+  
   tasks:
-  - name: using apt to install figlet
-    apt:
+
+  # first task         
+  - name: using apt to install figlet # providing meta-data for task
+    apt:                              # Ansible module (apt.py)   
         name: figlet
         state: present
-    become: yes
+    become: yes                        # Run as "sudo"
