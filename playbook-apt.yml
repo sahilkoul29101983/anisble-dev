@@ -12,3 +12,4 @@
         name: figlet
         state: present
     become: yes                        # Run as "sudo"
+    when: ansible_os_family == "Debian"
