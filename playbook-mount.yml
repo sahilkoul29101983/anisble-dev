@@ -23,7 +23,7 @@
               src: /tmp                   # dev to be mounted on the path
               opts: bind
               fstype: none
-              state: "{{ here_there }}"   # present == device will be mnted and configured in /etc/fstab
+              state: "{{ here_there }}"   # present == configured in /etc/fstab
                                           # absent == devices will be unmounted and removed from /etc/fstab
                                           # see documentation for other options
                                           
